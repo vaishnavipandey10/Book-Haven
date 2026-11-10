@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JBD Online Bookstore</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: wheat;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        #header {
+            background: blueviolet;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .intro {
+            margin: 20px;
+        }
+
+        .books {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .book {
+            background: white;
+            width: 200px;
+            padding: 15px;
+            border: 1px solid orchid;
+            border-radius: 10px;
+        }
+
+        .book img {
+            width: 150px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        button {
+            background: burlywood;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>📚 JBD Book Collection</h1>
+        <p>Your Online Bookstore</p>
+    </div>
+
+    <img class="banner"
+         src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1200"
+         alt="Bookstore">
+
+    <div class="intro">
+        <h2>Welcome to JBD Book Collection</h2>
+        <p>
+            Discover amazing books and find your favourite one.
+        </p>
+    </div>
+
+    <button onclick="changeColor()">Change Background Color</button>
+
+    <h2>Recommended Books</h2>
+
+    <div class="books">
+
+        <div class="book">
+            <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=300"
+                 alt="Book">
+            <h3>The Great Adventure</h3>
+            <p>$15.99</p>
+            <button onclick="buy('The Great Adventure')">
+                Purchase
+            </button>
+        </div>
+
+        <div class="book">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300"
+                 alt="Book">
+            <h3>Journey Through Time</h3>
+            <p>$18.99</p>
+            <button onclick="buy('the king rises')">
+                Purchase
+            </button>
+        </div>
+
+        <div class="book">
+            <img src="https://images.unsplash.com/photo-1511108690759-009324a90311?w=300"
+                 alt="Book">
+            <h3>Secrets of the Mind</h3>
+            <p>$12.99</p>
+            <button onclick="buy('Secrets of the Mind')">
+                Purchase
+            </button>
+        </div>
+
+        <div class="book">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300"
+                 alt="Book">
+            <h3>Beyond the Horizon</h3>
+            <p>$16.99</p>
+            <button onclick="buy('Beyond the Horizon')">
+                Purchase
+            </button>
+        </div>
+
+    </div>
+
+
+    <script>
+        function buy(book) {
+            alert(book + " purchased successfully!");
+        }
+
+        function changeColor() {
+            if (document.body.style.backgroundColor === "lightblue") {
+                document.body.style.backgroundColor = "#f5f5f5";
+            } else {
+                document.body.style.backgroundColor = "lightblue";
+            }
+        }
+    </script>
+
+
+</body>
